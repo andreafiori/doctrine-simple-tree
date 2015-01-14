@@ -8,7 +8,6 @@ use Doctrine\ORM\EntityManager;
 $paths = array("src/Entity");
 $isDevMode = false;
 
-// the connection configuration
 $dbParams = array(
     'driver'   => 'pdo_mysql',
 	'host'	   => 'localhost',

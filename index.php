@@ -24,5 +24,12 @@ foreach ($recursive_iterator as $index => $child_category)
 }
 
 ?>
-</select>
+</select><br><br>
 <?php
+
+$arrayCategories = array();
+foreach ($recursive_iterator as $index => $child_category)
+{
+	$arrayCategories[$child_category->getId()] = $child_category->getTitle();
+}
+var_dump($arrayCategories);

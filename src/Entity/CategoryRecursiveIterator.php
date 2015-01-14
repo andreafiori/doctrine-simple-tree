@@ -18,12 +18,18 @@ class CategoryRecursiveIterator implements \RecursiveIterator
     {
         $this->_data = $data;
     }
-
+    
+    /**
+     * @return bool
+     */
     public function hasChildren()
     {
         return ( ! $this->_data->current()->getChildCategories()->isEmpty());
     }
 
+    /**
+     * @return CategoryRecursiveIterator
+     */
     public function getChildren()
     {
         return new CategoryRecursiveIterator($this->_data->current()->getChildCategories());
