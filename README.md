@@ -1,12 +1,15 @@
 Doctrine Simple tree
 =========================
 
+Doctrine simple tree structure using parent \ child table fields.
+The application uses a standalone Doctrine installation.
+
 Installation
 -------------------------
 
 	composer install
 	
-The database with some sample data is on the sql directory
+The MySQL database with some sample data is on the sql directory
 
 
 Command line options
