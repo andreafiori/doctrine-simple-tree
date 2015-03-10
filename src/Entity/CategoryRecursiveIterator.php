@@ -45,11 +45,17 @@ class CategoryRecursiveIterator implements \RecursiveIterator
         $this->_data->next();
     }
 
+    /**
+     * @return int|string
+     */
     public function key()
     {
         return $this->_data->key();
     }
 
+    /**
+     * @return bool
+     */
     public function valid()
     {
         return $this->_data->current() instanceof \Entity\Category;
