@@ -1,16 +1,16 @@
 Doctrine simple tree
 =========================
 
-Doctrine simple tree structure using parent \ child table fields.
+Doctrine simple tree structure using a parent \ child field of a MySQL table.
 
 Installation
 -------------------------
 
 	composer install
-	
+
 The MySQL database with some sample data is on the sql directory
 
-Create table:
+You can create the empty table with a doctrine command:
 	vendor/bin/doctrine orm:schema-tool:create
 
 Command line options
@@ -22,16 +22,12 @@ On Windows it will become:
 
 vendor\bin\doctrine.bat orm:schema-tool:create
 
-Complete cli option list: http://doctrine-orm.readthedocs.org/en/latest/reference/tools.html
+Complete CLI option list: http://doctrine-orm.readthedocs.org/en/latest/reference/tools.html
 
-
-Some problems...
+TODO
 -------------------------
 
-This little project shows how to build a simple tree menu with Doctrine and parent\child fields on a table. But there are some problems:
-
-- You cannot get the father while iterating with the RecursiveIterator.
-- It's difficult to build a tree if you have some relationships with other tables. You have to access the Doctrine QueryBuilder but the CategoryRecursiveIterator class is using the Repository object directly.
+I wanted to print the categories in various forms. There's an example on index.php with a code block to turn in a recursive function.
 
 Resources
 -------------------------
