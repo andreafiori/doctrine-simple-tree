@@ -24,8 +24,7 @@ On Windows it will become:
 
 ## TODO
 
-- Print the categories in various forms
-- There's an example on index.php with a code block to turn in a recursive function.
+- Unit tests
 
 ## Resources
 
