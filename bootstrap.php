@@ -9,11 +9,11 @@ $paths = array("src/Entity");
 $isDevMode = false;
 
 $dbParams = array(
-    'driver'   => 'pdo_mysql',
+	'driver'   => 'pdo_mysql',
 	'host'	   => 'localhost',
-    'user'     => 'root',
-    'password' => '',
-    'dbname'   => 'tree',
+	'user'     => 'root',
+	'password' => '',
+	'dbname'   => 'tree',
 );
 
 $config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
