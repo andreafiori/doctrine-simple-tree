@@ -12,8 +12,8 @@ $dbParams = array(
 	'driver'   => 'pdo_mysql',
 	'host'	   => 'localhost',
 	'user'     => 'root',
-	'password' => '',
-	'dbname'   => 'tree',
+	'password' => 'root',
+	'dbname'   => 'doctrine-tree',
 );
 
 $config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode);
