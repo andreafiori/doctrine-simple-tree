@@ -1,12 +1,12 @@
 # Doctrine simple tree
 
-Doctrine simple tree structure using a parent \ child field of a MySQL table.
+Doctrine simple tree structure using a parent \ child fields of a MySQL table.
 
 ## Installation
 
 	composer install
 
-The MySQL database with some sample data is on the sql directory
+The MySQL database with some data samples is on the sql directory
 
 You can create the empty table with a doctrine command:
 
@@ -21,10 +21,6 @@ On Windows it will become:
 	vendor\bin\doctrine.bat orm:schema-tool:create
 
 [Complete CLI option list](http://doctrine-orm.readthedocs.org/en/latest/reference/tools.html)
-
-## TODO
-
-- Unit tests
 
 ## Resources
 
