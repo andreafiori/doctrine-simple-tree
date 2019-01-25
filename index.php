@@ -4,7 +4,6 @@ require_once('vendor/autoload.php');
 require_once('bootstrap.php');
 
 use Entity\Categories;
-use Entity\CategoryRecursiveIterator;
 use Models\CategoryFinder;
 
 $categoryFinder = new CategoryFinder($entityManager);
@@ -22,24 +21,25 @@ $recursive_iterator = $categoryFinder->recoverRecursiveIterator( $categoryFinder
 
 	<title>Doctrine 2 MySQL tree with a parent \ child structure</title>
 
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 <body>
 
 <div class="container">
 
+    <?php if (!empty($arrayCategories)): ?>
 	<h2>Doctrine MySQL tree</h2>
 	
 	<p>A category tree structure with a parent\child relashionship is stored on a MySQL database.<br>
 	Here is how a single and standalone Doctrine instance can recover all informations.</p>
-	
-	<p>&nbsp;</p>
+
+    <h3>Categories in a Dropdown</h3>
 
 	<form action="" class="form-inline">
 		<div class="form-group">
 			
-				<select name="category" id="category" class="form-control">
+				<select name="category" id="category" class="form-control mt-2 mb-2">
 					<option value="">Select</option>
 					<?php
 					$options = '';
@@ -56,9 +56,7 @@ $recursive_iterator = $categoryFinder->recoverRecursiveIterator( $categoryFinder
 		</div>
 	</form>
 
-	<p>&nbsp;</p>
-
-	<h2>Category array</h2>
+	<h3>Category array</h3>
 
 	<p>Using a <strong>CategoryRecursiveIterator entity</strong> and a PHP <a href="http://php.net/manual/en/class.recursiveiteratoriterator.php" target="_blank" title="RecursiveIteratorIterator guide on php.net [open page in another window]">RecursiveIteratorIterator</a>, I have built an array with the string of all categories and the related parent \ child relationship:</p>
 
@@ -66,8 +64,15 @@ $recursive_iterator = $categoryFinder->recoverRecursiveIterator( $categoryFinder
 
 	<hr>
 
+    <?php else: ?>
+        <div class="alert alert-warning mt-4 mb-2">
+            <h3 class="alert-heading">No data</h3>
+            <p>No categories have been found on the database :(</p>
+        </div>
+    <?php endif ?>
+
 	<footer>
-		<p>&copy; <?php echo date("Y") ?> - Andrea Fiori. </p>
+		<p>&copy; <?php echo '2017 - '.date("Y") ?> - Andrea Fiori. </p>
 	</footer>
 </div>
 

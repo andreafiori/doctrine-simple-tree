@@ -35,6 +35,9 @@ class CategoryRecursiveIterator implements \RecursiveIterator
 		return new CategoryRecursiveIterator($this->_data->current()->getChildCategories());
 	}
 
+    /**
+     * @return mixed
+     */
 	public function current()
 	{
 		return $this->_data->current();
