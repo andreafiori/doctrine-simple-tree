@@ -14,13 +14,15 @@ You can create the empty table with a doctrine command:
 
 ## Command line options
 
+On Linux:
+
 	vendor/bin/doctrine orm:schema-tool:create
 
-On Windows it will become:
+On Windows:
 
 	vendor\bin\doctrine.bat orm:schema-tool:create
 
-[Complete CLI option list](http://doctrine-orm.readthedocs.org/en/latest/reference/tools.html)
+- [Complete CLI option list](http://doctrine-orm.readthedocs.org/en/latest/reference/tools.html)
 
 ## Resources
 
